@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANO-TEST | Натуральный афродизиак</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+        }
+        .text-accent { color: #C5A059; }
+        .bg-accent { background-color: #C5A059; }
+        .border-accent { border-color: #C5A059; }
+        .border-soft { border-color: rgba(255, 255, 255, 0.1); }
+        
+        .glass-header {
+            background: rgba(5, 5, 5, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .img-grayscale {
+            filter: grayscale(100%) brightness(0.8);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-grayscale:hover {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.3);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #C5A059; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <header class="fixed top-0 z-50 w-full glass-header border-b border-soft h-16 flex items-center px-6 md:px-12 justify-between">
+        <div class="text-xl font-bold tracking-[0.25em] text-accent">NANO-TEST</div>
+        <div class="flex items-center gap-6">
+            <nav class="hidden md:flex gap-8 text-[10px] uppercase tracking-[0.2em] text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors">О продукте</a>
+                <a href="#benefits" class="hover:text-white transition-colors">Эффекты</a>
+                <a href="#usage" class="hover:text-white transition-colors">Применение</a>
+            </nav>
+            <button onclick="toggleModal(true)" class="px-5 py-2 border border-accent text-accent text-[10px] uppercase tracking-widest hover:bg-accent hover:text-black transition-all duration-500">
+                Заказать
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-screen-xl mx-auto px-6 md:px-12">
+        
+        <section class="min-h-screen flex flex-col lg:flex-row items-center gap-12 lg:gap-20 pt-32 pb-12">
+            <div class="flex-1 text-center lg:text-left z-10" data-aos="fade-up">
+                <div class="inline-block px-3 py-1 border border-soft text-[10px] uppercase tracking-[0.3em] mb-8 text-accent">
+                    Batch 001 / Natural Aphrodisiac
+                </div>
+                <h1 class="text-4xl md:text-7xl font-bold tracking-tight mb-6 leading-tight uppercase">
+                    Энергия <br> <span class="text-accent">Природы</span>
+                </h1>
+                <p class="text-gray-400 font-light text-base md:text-lg mb-10 max-w-xl leading-relaxed">
+                    <span class="text-white font-medium italic">NANO-TEST</span> — это натуральный афродизиак, изготовленный из смеси лекарственных трав, настоянных на меду. Чистая мощь органики.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <button onclick="toggleModal(true)" class="bg-accent text-black px-10 py-5 text-xs font-bold tracking-[0.2em] uppercase transition-all duration-500 hover:shadow-[0_0_30px_rgba(197,160,89,0.4)]">
+                        Оформить заказ
+                    </button>
+                    <div class="flex items-center justify-center gap-4 px-8 py-4 border border-soft text-sm tracking-widest uppercase">
+                        5 000 ₽
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 relative w-full" data-aos="fade-left" data-aos-delay="200">
+                <div class="absolute inset-0 bg-[#C5A059] opacity-10 blur-[100px] rounded-full"></div>
+                <div class="relative z-10 border border-[#ffffff0a] bg-[#111] overflow-hidden shadow-2xl">
+                    <img src="first.jpg" alt="Nano-test">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 border-t border-soft" data-aos="fade-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-xs uppercase tracking-[0.4em] text-accent mb-4">The Essence</h2>
+                    <h3 class="text-3xl font-medium uppercase mb-8">Многогранный состав</h3>
+                    <p class="text-gray-400 leading-relaxed mb-8">
+                        В этом продукте собрана сила природы: три вида женьшеня (красный, сибирский и американский), азиатская центелла, мака перуанская, гинкго билоба, корень калгана, цератоний стручковый, пальмовая пыльца, колючая лоза, крапива, перец острый красный, овес, семена зародышей тыквы и прополис.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="product.jpg" alt="Detail 1">
+                        <img src="product2.jpg" alt="Detail 2"> 
+                    </div>
+                </div>
+                <div class="relative aspect-square overflow-hidden border border-soft">
+<img src="product1.jpg" alt="Product">
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="py-24 bg-[#080808] -mx-6 md:-mx-12 px-6 md:px-12 border-y border-soft">
+            <div class="max-w-4xl mx-auto text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-medium uppercase tracking-tighter mb-6 italic">Золотой стандарт оздоровления</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-right">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Очищает и укрепляет стенки сосудов</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-right" data-aos-delay="50">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Улучшает состав крови и обмен веществ</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-right" data-aos-delay="100">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Увеличивает половую активность и потенцию</span>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-left">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Нормализует гормональный фон</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-left" data-aos-delay="50">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Усиливает интенсивность оргазма</span>
+                    </div>
+                    <div class="flex items-center gap-6 p-5 bg-[#111] border border-[#ffffff05] hover:border-[#C5A059]/30 transition-colors" data-aos="fade-left" data-aos-delay="100">
+                        <div class="w-10 h-10 shrink-0 border border-[#C5A059]/20 flex items-center justify-center text-accent"><i data-lucide="star" class="w-4 h-4 fill-current"></i></div>
+                        <span class="text-sm text-gray-300 font-light leading-snug">Усиливает иммунитет</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="py-24 border-t border-soft" data-aos="fade-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-medium uppercase tracking-widest">Протоколы применения</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="p-8 bg-[#111] border border-soft hover:border-accent transition-all text-center">
+                    <h4 class="text-accent text-[10px] font-bold uppercase mb-4 tracking-[0.3em]">Баланс</h4>
+                    <p class="text-sm text-gray-300 font-light">0,5 ч.л. утром 1 раз в день.</p>
+                </div>
+                <div class="p-8 bg-[#111] border border-soft hover:border-accent transition-all text-center">
+                    <h4 class="text-accent text-[10px] font-bold uppercase mb-4 tracking-[0.3em]">Спорт</h4>
+                    <p class="text-sm text-gray-300 font-light">0,5 ч.л. за 1 час до тренировок.</p>
+                </div>
+                <div class="p-8 bg-[#111] border border-soft hover:border-accent transition-all text-center">
+                    <h4 class="text-accent text-[10px] font-bold uppercase mb-4 tracking-[0.3em]">Либидо</h4>
+                    <p class="text-sm text-gray-300 font-light mb-3">0,5 ч.л. за час до полового акта.</p>
+                    <p class="text-[10px] text-red-400 font-bold uppercase tracking-wider">После акта не употреблять.</p>
+                </div>
+            </div>
+            <div class="max-w-2xl mx-auto text-center px-6">
+                <p class="text-gray-400 text-sm italic font-light">
+                    Организм каждого индивидуален, рекомендуется начать приём с порции чуть меньше половины чайной ложки.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-24 border-t border-soft" data-aos="fade-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-[#100] border border-red-900/30 p-10">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i data-lucide="alert-triangle" class="text-red-500"></i>
+                        <h3 class="text-xl font-bold uppercase tracking-widest text-red-500">Противопоказания</h3>
+                    </div>
+                    <div class="space-y-4 text-sm text-gray-300 font-light">
+                        <p>— С осторожностью при проблемах с сердцем, сосудами и диабете.</p>
+                        <p>— Беременным и кормящим.</p>
+                        <p class="pt-4 text-red-500 font-bold uppercase text-xs">Обязательно ознакомьтесь с полным описанием.</p>
+                    </div>
+                </div>
+                <p class="text-center mt-8 text-[10px] text-gray-500 uppercase tracking-widest">БАД не является лекарственным средством</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 border-t border-soft">
+        <div class="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-sm font-bold tracking-[0.2em] text-accent uppercase">NANO-TEST 18+</div>
+            <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em]">NATURAL PERFORMANCE • 2026</div>
+            <div class="text-gray-500 text-[10px] uppercase tracking-widest">5 000 ₽</div>
+        </div>
+    </footer>
+
+    <div id="orderModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-6">
+        <div onclick="toggleModal(false)" class="absolute inset-0 bg-black/95 backdrop-blur-xl"></div>
+        <div class="relative w-full max-w-lg bg-[#111] border border-soft p-10">
+            <div id="formContent">
+                <h3 class="text-2xl font-medium mb-8 uppercase text-accent">Заказать</h3>
+                <form onsubmit="handleOrder(event)" class="space-y-6">
+                    <input type="text" id="nameInput" required class="w-full bg-black border border-soft p-4 text-sm focus:border-accent outline-none" placeholder="Имя">
+                    <input type="text" id="tgInput" required class="w-full bg-black border border-soft p-4 text-sm focus:border-accent outline-none" placeholder="Telegram @username">
+                    <button type="submit" class="w-full bg-accent text-black py-5 text-xs font-bold uppercase tracking-widest hover:brightness-110">Отправить запрос</button>
+                </form>
+            </div>
+            <div id="successContent" class="hidden text-center py-10">
+                <i data-lucide="send" class="text-accent w-12 h-12 mx-auto mb-6"></i>
+                <p class="text-sm text-white font-bold uppercase mb-2">Заявка принята</p>
+                <p class="text-xs text-gray-400 italic">Свяжемся с вами в ближайшее время.</p>
+            </div>
+            <button onclick="toggleModal(false)" class="absolute top-6 right-6 text-gray-600 hover:text-white"><i data-lucide="x"></i></button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        lucide.createIcons();
+
+        const modal = document.getElementById('orderModal');
+        const formContent = document.getElementById('formContent');
+        const successContent = document.getElementById('successContent');
+
+        function toggleModal(show) {
+            modal.classList.toggle('hidden', !show);
+            modal.classList.toggle('flex', show);
+            document.body.style.overflow = show ? 'hidden' : 'auto';
+        }
+
+        function handleOrder(e) {
+            e.preventDefault();
+            formContent.classList.add('hidden');
+            successContent.classList.remove('hidden');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
