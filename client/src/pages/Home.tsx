@@ -11,23 +11,23 @@ import { Star, AlertTriangle, Leaf, Shield, Zap, Heart, Quote } from "lucide-rea
 const TG_BOT = "https://t.me/nano_test_shop_bot";
 
 // ─── Image URLs ────────────────────────────────────────────────────────────────
-const IMG_JAR   = "/manus-storage/nano-jar_d754284f.webp";
+const IMG_JAR   = "/img/nano-jar_d754284f.webp";
 
 // Product detail photos (label close-ups)
-const IMG_DETAIL1 = "/manus-storage/detail1_df2f5c02.webp";
-const IMG_DETAIL2 = "/manus-storage/detail2_e04b0a6f.webp";
+const IMG_DETAIL1 = "/img/detail1_df2f5c02.webp";
+const IMG_DETAIL2 = "/img/detail2_e04b0a6f.webp";
 
 // Gallery / reviews avatars — remaining photos
-const IMG_G1    = "/manus-storage/photo_2026-05-13_00-26-20_5a95f3f9.jpg";
-const IMG_G2    = "/manus-storage/photo_2026-05-13_00-26-21_8d40c979.jpg";
-const IMG_G3    = "/manus-storage/photo_2026-05-13_00-26-24_74ed1ebb.jpg";
-const IMG_G4    = "/manus-storage/photo_2026-05-13_00-26-25_7cf24028.jpg";
-const IMG_G5    = "/manus-storage/photo_2026-05-13_00-26-25(2)_69f8cf00.jpg";
-const IMG_G6    = "/manus-storage/photo_2026-05-13_00-26-26_a6b41f79.jpg";
-const IMG_G7    = "/manus-storage/photo_2026-05-13_00-26-29_7db165fc.jpg";
-const IMG_G8    = "/manus-storage/photo_2026-05-13_00-26-30_403fc291.jpg";
-const IMG_G9    = "/manus-storage/photo_2026-05-13_00-26-37_424c43ec.jpg";
-const IMG_G10   = "/manus-storage/photo_2026-05-13_00-26-38_58b7c1bc.jpg";
+const IMG_G1    = "/img/photo_2026-05-13_00-26-20_5a95f3f9.jpg";
+const IMG_G2    = "/img/photo_2026-05-13_00-26-21_8d40c979.jpg";
+const IMG_G3    = "/img/photo_2026-05-13_00-26-24_74ed1ebb.jpg";
+const IMG_G4    = "/img/photo_2026-05-13_00-26-25_7cf24028.jpg";
+const IMG_G5    = "/img/photo_2026-05-13_00-26-25(2)_69f8cf00.jpg";
+const IMG_G6    = "/img/photo_2026-05-13_00-26-26_a6b41f79.jpg";
+const IMG_G7    = "/img/photo_2026-05-13_00-26-29_7db165fc.jpg";
+const IMG_G8    = "/img/photo_2026-05-13_00-26-30_403fc291.jpg";
+const IMG_G9    = "/img/photo_2026-05-13_00-26-37_424c43ec.jpg";
+const IMG_G10   = "/img/photo_2026-05-13_00-26-38_58b7c1bc.jpg";
 
 // ─── Intersection-observer hook ───────────────────────────────────────────────
 function useInView(threshold = 0.12) {
