@@ -1,14 +1,16 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "nanotest",
-  "compatibility_date": "2026-05-27",
+  "compatibility_date": "2026-05-30",
+  "compatibility_flags": ["nodejs_compat"],
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "nano-test"
-  },
-  "compatibility_flags": [
-    "nodejs_compat"
-  ]
+    // Vite билдит SPA сюда (см. vite.config.ts: build.outDir).
+    // Express-сервер из server/index.ts на Cloudflare не используется —
+    // Workers сам отдаёт статику и фолбэк на index.html для SPA-роутов.
+    "directory": "dist/public",
+    "not_found_handling": "single-page-application"
+  }
 }
