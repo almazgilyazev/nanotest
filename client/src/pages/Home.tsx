@@ -322,7 +322,7 @@ export default function Home() {
               </a>
               <div className="flex items-center justify-center gap-4 px-8 py-4 border text-sm tracking-widest uppercase"
                 style={{ borderColor: "rgba(255,255,255,0.1)" }}>
-                5 000 ₽
+                10 000 ₽
               </div>
             </div>
           </FadeUp>
